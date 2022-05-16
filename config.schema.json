@@ -1,0 +1,47 @@
+{
+  "pluginAlias": "homebridge-http-windspeed",
+  "pluginType": "platform",
+  "headerDisplay": "You must supply _either_ **URL & Http Method** the url must return the data un the json format: {
+	\"windspeed\": 50.0
+}",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "placeholder": "HTTP windspeed"
+      },
+      "url": {
+        "title": "Url",
+        "type": "string",
+        "placeholder": "http://"
+      },
+      "http_method": {
+        "title": "Http Method",
+        "type": "string",
+        "placeholder": "GET|POST"
+      }
+    },
+    "oneOf": [
+      {
+        "required": [
+          "name",
+          "url",
+          "http_method"
+        ]
+      }
+    ]
+  },
+  "layout": [
+    {
+      "type": "flex",
+      "flex-flow": "row wrap",
+      "items": [
+          "name",
+          "url",
+          "http_method"
+      ]
+    }
+  ]
+}

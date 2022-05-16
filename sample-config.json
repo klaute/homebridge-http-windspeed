@@ -1,0 +1,21 @@
+{
+    "bridge": {
+        "name": "HomebridgePI",
+        "username": "CD:22:3D:E3:CE:30",
+        "port": 51826,
+        "pin": "031-45-156"
+    },
+
+    "description": "My Home",
+
+    "platforms": [],
+
+    "accessories": [
+        {
+            "accessory": "HttpWindspeed",
+            "name": "Windspeed",
+            "url": "http://192.168.0.123/windspeed",
+            "http_method": "GET"
+        }
+    ]
+}
