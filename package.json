@@ -1,6 +1,6 @@
 {
   "name": "homebridge-http-windspeed",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "description": "http windspeed sensor plugin for homebridge. Requires additional hardware or external url.",
   "main": "index.js",
   "scripts": {
