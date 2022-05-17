@@ -18,10 +18,6 @@
   "dependencies": {
     "homebridge-lib": "~5.5.0"
   },
-  "scripts": {
-    "prepare": "standard",
-    "test": "standard && echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ebaauw/homebridge-http-windspeed.git"
