@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "homebridge-http-windspeed",
+  "pluginAlias": "HttpWindspeed",
   "pluginType": "platform",
   "headerDisplay": "You must supply _either_ **URL & Http Method** the url must return the data un the json format: {
 	\"windspeed\": 50.0
