@@ -12,21 +12,42 @@
         "type": "string",
         "placeholder": "HTTP windspeed"
       },
-      "url": {
-        "title": "Url",
+      "host": {
+        "title": "host",
         "type": "string",
-        "placeholder": "http://"
+        "placeholder": "192.168.0.123:8080"
       },
-      "http_method": {
-        "title": "Http Method",
+      "path": {
+        "title": "path",
         "type": "string",
-        "placeholder": "GET|POST"
+        "placeholder": "/windspeed"
+      },
+      "manufacturer": {
+        "title": "manufacturer",
+        "type": "string",
+        "placeholder": "diy"
+      },
+      "model": {
+        "title": "model",
+        "type": "string",
+        "placeholder": "v1.0"
+      },
+      "serial": {
+        "title": "serial",
+        "type": "string",
+        "placeholder": "202205"
+      },
+      "timeout": {
+        "title": "timeout",
+        "type": "int",
+        "placeholder": "60"
       }
     },
     "oneOf": [
       {
         "required": [
-          "name",
+          "host",
+          "path",
           "url",
           "http_method"
         ]
