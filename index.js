@@ -13,5 +13,5 @@ const WsPlatform = require('./lib/WsPlatform')
 const packageJson = require('./package.json')
 
 module.exports = function (homebridge) {
-  WsPlatform.loadPlatform(homebridge, packageJson, 'WS', WsPlatform)
+  WsPlatform.loadPlatform(homebridge, packageJson, 'homebridge-http-windspeed', WsPlatform)
 }
