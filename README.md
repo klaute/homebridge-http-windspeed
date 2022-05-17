@@ -1,6 +1,7 @@
 # homebridge-http-lux2
 
 This is a copy of http://github.com/epadillac/homebridge-http-lux.git
+Huge parts are also copied from homebridge-ws project on github.
 
 Supports http ambient light sensor devices on the Homebridge platform. Additional hardware required.
 This is a modified version of the https://github.com/metbosch/homebridge-http-temperature plugin.
@@ -20,10 +21,11 @@ Configuration sample file:
  ```
  "accessories": [
      {
-         "accessory": "HttpWind",
-         "name": "Ambient Light Level",
-         "url": "http://192.168.0.20/api/windlevel",
-         "http_method": "GET"
+         "accessory": "homebridge-http-windspeed",
+         "name": "Windspeed",
+         "host": "192.168.0.20:8",
+         "path": "/api/windspeed",
+         "timeout": 60,
      }
  ]
 
@@ -33,9 +35,9 @@ Configuration sample file:
 The defined endpoint will return a json looking like this
 ```
 {
-	"windspeed": 50.0
+	"windspeed": 5
 }
 ```
 
 
-This plugin acts as an interface between a web endpoint and homebridge. You will need additional hardware to expose the web endpoints with the wind level information. I built my Temperature, Humidity and Light Sensor on the NodeMCU board with Arduino IDE.
+This plugin acts as an interface between a web endpoint and homebridge. You will need additional hardware to expose the web endpoints with the wind level information.
