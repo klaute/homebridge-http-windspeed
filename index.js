@@ -23,8 +23,8 @@ function HttpWindspeed(log, config) {
    this.model = config["model"] || "nodeMCU multi sensor DIY";
    this.serial = config["serial"] || "20220516";
    this.timeout = config["timeout"] || DEF_TIMEOUT;
-   this.minLux = config["min_lux"] || DEF_MIN_SPEED;
-   this.maxLux = config["max_lux"] || DEF_MAX_SPEED;
+   this.minWindSpeed = config["min_lux"] || DEF_MIN_SPEED;
+   this.maxWindSpeed = config["max_lux"] || DEF_MAX_SPEED;
 }
 
 HttpWindspeed.prototype = {
@@ -65,15 +65,15 @@ HttpWindspeed.prototype = {
       .setCharacteristic(Characteristic.Model, this.model)
       .setCharacteristic(Characteristic.SerialNumber, this.serial);
 
-      this.windspeedService = new Service.WindSensor(this.name);
+      this.windspeedService = new Service.eve.WindSensor(this.name);
       this.windspeedService
-         .getCharacteristic(Characteristic.CurrentAmbientLightLevel)
+         .getCharacteristic(Characteristic.eve.WindSpeed)
          .on('get', this.getState.bind(this))
          .setProps({
-             minValue: this.minLux,
-             maxValue: this.maxLux
+             minValue: this.minWindSpeed,
+             maxValue: this.maxWindSpeedx
          });
-      return [this.informationService, this.WindLevelService];
+      return [this.informationService, this.windspeedService];
    }
 };
 
