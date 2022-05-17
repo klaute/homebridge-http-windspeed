@@ -40,7 +40,7 @@
       "timeout": {
         "title": "timeout",
         "type": "int",
-        "placeholder": "60"
+        "placeholder": 60
       }
     },
     "oneOf": [
