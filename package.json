@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "homebridge-http-windspeed",
   "description": "Homebridge plugin for windspeed",
   "displayName": "Homebridge WindSpeed",
