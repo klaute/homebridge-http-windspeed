@@ -22,9 +22,10 @@ Configuration sample file:
  "accessories": [
      {
          "accessory": "homebridge-http-windspeed",
-         "name": "Windspeed",
-         "host": "192.168.0.20:8",
-         "path": "/api/windspeed",
+         "name":    "Windspeed",
+         "host":    "192.168.0.20:8",
+         "path":    "/api/",
+	 "suffix":  "windspeed",
          "timeout": 60,
      }
  ]

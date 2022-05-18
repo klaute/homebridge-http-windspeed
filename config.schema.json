@@ -20,7 +20,12 @@
       "path": {
         "title": "path",
         "type": "string",
-        "placeholder": "/windspeed"
+        "placeholder": "/"
+      },
+      "suffix": {
+        "title": "suffix",
+        "type": "string",
+        "placeholder": "getwindspeed"
       },
       "manufacturer": {
         "title": "manufacturer",
