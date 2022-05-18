@@ -2,7 +2,7 @@
   "pluginAlias": "homebridge-http-windspeed",
   "pluginType": "platform",
   "singular": true,
-  "headerDisplay": "The url must return the data un the json format: { \"windspeed\": 50 }",
+  "headerDisplay": "The url must return the data un the json format: { \n\"windspeed\": 50\n}",
   "schema": {
     "type": "object",
     "properties": {
@@ -57,27 +57,65 @@
         "placeholder": 60
       }
     },
-    "oneOf": [
-      {
-        "required": [
-          "name",
-          "host",
-          "path"
-        ]
-      }
-    ]
-  },
-  "layout": [
+  "form": [
+    "name",
+    "apikey",
     {
-      "type": "flex",
-      "displayFlex": true,
-      "flex-flow": "row wrap",
-      "items": [{
-          "name",
-          "host",
-          "path"
+      "type": "help",
+      "helpvalue": "City Names <strong class='text-danger'>*</strong>"
+    },
+    {
+      "nodescription": true,
+      "notitle": true,
+      "key": "locations",
+      "type": "array",
+      "items": [
+        {
+          "type": "div",
+          "displayFlex": true,
+          "flex-direction": "row",
+          "items": [
+            {
+              "key": "locations[]",
+              "required": true,
+              "flex": "1 1 50px"
+            }
+          ]
         }
+      ]
+    },
+    {
+      "nodescription": true,
+      "notitle": true,
+      "key": "cityIds",
+      "type": "array",
+      "items": [
+        {
+          "type": "div",
+          "displayFlex": true,
+          "flex-direction": "row",
+          "items": [
+            {
+              "key": "cityIds[]",
+              "required": true,
+              "flex": "1 1 50px"
+            }
+          ]
+        }
+      ]
+    },
+    "dailyForecasts",
+    "hourlyForecasts",
+    "noLeak",
+    {
+      "type": "fieldset",
+      "expandable": true,
+      "title": "Advanced Settings",
+      "description": "Don't change these, unless you understand what you're doing.",
+      "items": [
+        "timeout"
       ]
     }
   ]
+
 }
