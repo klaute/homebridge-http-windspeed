@@ -1,16 +1,16 @@
-# homebridge-http-lux2
+# homebridge-http-windspeed
 
 This is a copy of http://github.com/epadillac/homebridge-http-lux.git
 Huge parts are also copied from homebridge-ws project on github.
 
-Supports http ambient light sensor devices on the Homebridge platform. Additional hardware required.
+Supports http windspeed sensor devices on the Homebridge platform. Additional hardware required.
 This is a modified version of the https://github.com/metbosch/homebridge-http-temperature plugin.
-This version only supports the light sensor. MAX lightlevel is set to 800.
+This version only supports the windspeed sensor. MAX speed is set to 10000 units.
 
 # Installation
 
 1. Install homebridge using: npm install -g homebridge
-2. Install this plugin using: npm install -g homebridge-http-lux2
+2. Install this plugin using: npm install -g homebridge-http-windspeed
 3. Update your configuration file. See sample-config.json in this repository for a sample.
 
 # Configuration
@@ -35,7 +35,7 @@ Configuration sample file:
 The defined endpoint will return a json looking like this
 ```
 {
-	"windspeed": 5
+	"windspeed": 50
 }
 ```
 
