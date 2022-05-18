@@ -19,7 +19,7 @@
             "model":         "your model",
             "serial":        "12345",
             "timeout":       60,
-            "min_windspeed": 1,
+            "min_windspeed": 0,
             "max_windspeed": 10000
         }
     ]
