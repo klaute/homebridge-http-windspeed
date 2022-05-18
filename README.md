@@ -18,20 +18,24 @@ This version only supports the windspeed sensor. MAX speed is set to 10000 units
 
 Configuration sample file:
 
- ```
- "accessories": [
-     {
-         "accessory": "homebridge-http-windspeed",
-         "name":    "Windspeed",
-         "host":    "192.168.0.20:8",
-         "path":    "/api/",
-	 "suffix":  "windspeed",
-         "timeout": 60,
-     }
- ]
-
 ```
-
+"platforms": [
+    {
+        "platform":      "homebridge-http-windspeed",
+        "name":          "Windspeed",
+        "host":          "192.168.0.20:8080",
+        "path":          "/api/",
+        "suffix":        "windspeed",
+        "manufacturer":  "your name",
+        "model":         "your model",
+        "serial":        "12345",
+        "timeout":       60,
+        "min_windspeed": 1,
+        "max_windspeed": 10000
+    }
+]
+```
+URL that is generated to download data: http://192.168.0.20:8080/api/windspeed
 
 The defined endpoint will return a json looking like this
 ```
