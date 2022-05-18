@@ -1,7 +1,8 @@
 {
   "pluginAlias": "homebridge-http-windspeed",
   "pluginType": "platform",
-  "headerDisplay": "You must supply _either_ **URL & Http Method** the url must return the data un the json format: {
+  "singular": true,
+  "headerDisplay": "The url must return the data un the json format: {
 	\"windspeed\": 50
 }",
   "schema": {

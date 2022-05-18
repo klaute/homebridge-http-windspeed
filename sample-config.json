@@ -8,16 +8,19 @@
 
     "description": "My Home",
 
-    "platforms": [],
-
-    "accessories": [
+    "platforms": [
         {
-            "accessory": "HttpWindspeed",
-            "name": "Windspeed",
-            "host": "192.168.0.123",
-            "path": "/windspeed",
-            "suffix": "",
-            "timeout": 10
+            "platform":      "homebridge-http-windspeed",
+            "name":          "Windspeed",
+            "host":          "192.168.0.20:8080",
+            "path":          "/api/",
+            "suffix":        "windspeed",
+            "manufacturer":  "your name",
+            "model":         "your model",
+            "serial":        "12345",
+            "timeout":       60,
+            "min_windspeed": 1,
+            "max_windspeed": 10000
         }
     ]
 }
