@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ebaauw/homebridge-http-windspeed.git"
+    "url": "git+https://github.com/klaute/homebridge-http-windspeed.git"
   },
   "bugs": {
-    "url": "https://github.com/ebaauw/homebridge-http-windspeed/issues"
+    "url": "https://github.com/klaute/homebridge-http-windspeed/issues"
   },
-  "homepage": "https://github.com/ebaauw/homebridge-http-windspeed#readme",
+  "homepage": "https://github.com/klaute/homebridge-http-windspeed#readme",
   "funding": {
     "type": "paypal",
     "url": "https://www.paypal.me/kailauterbach/EUR"
