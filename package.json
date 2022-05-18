@@ -4,7 +4,7 @@
   "displayName": "Homebridge WindSpeed",
   "author": "Kai Lauterbach",
   "license": "Apache-2.0",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "keywords": [
     "homebridge-plugin",
     "homekit",
@@ -20,12 +20,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/klaute/homebridge-http-windspeed.git"
+    "url": "git://github.com/klaute/homebridge-http-windspeed.git"
   },
-  "bugs": {
-    "url": "https://github.com/klaute/homebridge-http-windspeed/issues"
-  },
-  "homepage": "https://github.com/klaute/homebridge-http-windspeed#readme",
   "funding": {
     "type": "paypal",
     "url": "https://www.paypal.me/kailauterbach/EUR"
