@@ -16,6 +16,7 @@
             "name": "Windspeed",
             "host": "192.168.0.123",
             "path": "/windspeed",
+            "suffix": "",
             "timeout": 10
         }
     ]
