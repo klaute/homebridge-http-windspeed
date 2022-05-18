@@ -72,11 +72,13 @@
   "layout": [
     {
       "type": "flex",
+      "displayFlex": true,
       "flex-flow": "row wrap",
-      "items": [
+      "items": [{
           "name",
           "host",
           "path"
+        }
       ]
     }
   ]
