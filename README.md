@@ -1,11 +1,10 @@
 # homebridge-http-weatherstation
 
-This is a copy of http://github.com/epadillac/homebridge-http-lux.git
-Huge parts are also copied from homebridge-ws project on github.
+This is a copy of homebridge-ws project on github.
 
 Supports http weatherstation sensor devices on the Homebridge platform. Additional hardware required.
-This is a modified version of the https://github.com/metbosch/homebridge-http-temperature plugin.
-This version only supports the weatherstation sensor. MAX speed is set to 10000 units.
+Only updated temperature, pressure, humidity, windspeed.
+All other values will not changed.
 
 # Installation
 
@@ -26,12 +25,10 @@ Configuration sample file:
         "host":          "192.168.0.20:8080",
         "path":          "/api/",
         "suffix":        "weatherstation",
-        "manufacturer":  "your name",
-        "model":         "your model",
-        "serial":        "12345",
+        "locations":     [
+                            "home"
+                         ]
         "timeout":       60,
-        "min_weatherstation": 1,
-        "max_weatherstation": 10000
     }
 ]
 ```
@@ -43,6 +40,7 @@ The defined endpoint will return a json looking like this
 	"temperature": 36.0,
 	"humidity": 50.0,
 	"windspeed": 50
+	"pressure": 1000
 }
 ```
 

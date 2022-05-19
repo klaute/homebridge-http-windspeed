@@ -2,67 +2,65 @@
   "pluginAlias": "homebridge-http-weatherstation",
   "pluginType": "platform",
   "singular": true,
-  "headerDisplay": "The url must return the data un the json format: { \n\"windspeed\": 50\n\"temperature\": 26.0\n\"humidity\": 30.0\n }",
+  "headerDisplay": "Homebridge plugin for http weatherstation",
   "schema": {
     "type": "object",
     "properties": {
-      "name": {
-        "title": "Name",
-        "type": "string",
-        "placeholder": "HTTP weatherstation"
-      },
       "host": {
-        "title": "host",
+        "title": "Host",
+        "description": "hostname/ip:port.",
         "type": "string",
-        "placeholder": "192.168.0.123:8080"
+        "required": true,
+        "default": "192.168.178.188:3124"
       },
       "path": {
-        "title": "path",
+        "title": "Path",
+        "description": "path like /api/",
         "type": "string",
-        "placeholder": "/"
+        "required": true,
+        "default": "/api/"
       },
       "suffix": {
-        "title": "suffix",
+        "title": "Suffix",
+        "description": "suffix like script.pl?a=1&b=2",
         "type": "string",
-        "placeholder": "getwweatherdata"
+        "required": true,
+        "default": "script.pl"
       },
-      "manufacturer": {
-        "title": "manufacturer",
+      "name": {
+        "title": "Name",
+        "description": "Plugin name as displayed in the Homebridge log.",
         "type": "string",
-        "placeholder": "diy"
+        "required": true,
+        "default": "Weather"
       },
-      "model": {
-        "title": "model",
-        "type": "string",
-        "placeholder": "v1.0"
-      },
-      "serial": {
-        "title": "serial",
-        "type": "string",
-        "placeholder": "202205"
-      },
-      "min_windspeed": {
-        "title": "min windspeed",
-        "type": "int",
-        "placeholder": 0
-      },
-      "max_windspeed": {
-        "title": "max windspeed",
-        "type": "int",
-        "placeholder": 10000
+      "locations": {
+        "title": "Location Name",
+        "type": "array",
+        "required": true,
+        "items": {
+          "title": "Location Name",
+          "description": "like home, garden",
+          "type": "string"
+        }
       },
       "timeout": {
-        "title": "timeout",
-        "type": "int",
-        "placeholder": 60
+        "title": "Timeout",
+        "description": "Timeout in seconds. Default: 15.",
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 60
       }
-    },
+    }
+  },
   "form": [
+    "host",
+    "path",
+    "suffix",
     "name",
-    "apikey",
     {
       "type": "help",
-      "helpvalue": "City Names <strong class='text-danger'>*</strong>"
+      "helpvalue": "Location Names <strong class='text-danger'>*</strong>"
     },
     {
       "nodescription": true,
@@ -84,38 +82,6 @@
         }
       ]
     },
-    {
-      "nodescription": true,
-      "notitle": true,
-      "key": "cityIds",
-      "type": "array",
-      "items": [
-        {
-          "type": "div",
-          "displayFlex": true,
-          "flex-direction": "row",
-          "items": [
-            {
-              "key": "cityIds[]",
-              "required": true,
-              "flex": "1 1 50px"
-            }
-          ]
-        }
-      ]
-    },
-    "dailyForecasts",
-    "hourlyForecasts",
-    "noLeak",
-    {
-      "type": "fieldset",
-      "expandable": true,
-      "title": "Advanced Settings",
-      "description": "Don't change these, unless you understand what you're doing.",
-      "items": [
-        "timeout"
-      ]
-    }
+    "timeout"
   ]
-
 }
