@@ -4,8 +4,7 @@
 // Homebridge plugin for virtual weather station.
 //
 // Modified by: Kai Lauterbach (05/2022)
-//
-// Removed all except of Windspeed
+
 
 'use strict'
 
