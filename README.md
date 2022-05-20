@@ -2,9 +2,17 @@
 
 This is a copy of homebridge-ws project on github.
 
-Supports http weatherstation sensor devices on the Homebridge platform. Additional hardware required.
+Supports http weatherstation sensor devices on the Homebridge platform.
+Additional hardware required.
+See project: https://git.okoyono.de/okoyono/weatherstation/src/branch/feature/InfluxDB-Connection-Update
+
 Only updated temperature, pressure, humidity, windspeed.
-All other values will not changed.
+All other values aren't touched.
+
+Temperature and Humidity is available in Apple Home app.
+All other values can only be shown in a app like Eve.
+
+You can hide the values that not will change in Eve manually
 
 # Installation
 
