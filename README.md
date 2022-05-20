@@ -1,6 +1,6 @@
 # homebridge-http-weatherstation
 
-This is a copy of homebridge-ws project on github.
+This is a copy of https://github.com/ebaauw/homebridge-ws
 
 Supports http weatherstation sensor devices on the Homebridge platform.
 Additional hardware required.
