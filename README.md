@@ -45,10 +45,11 @@ URL that is generated to download data: http://192.168.0.20:8080/api/weatherstat
 The defined endpoint will return a json looking like this
 ```
 {
-	"temperature": 36.0,
-	"humidity": 50.0,
-	"windspeed": 50
-	"pressure": 1000
+    "temperature": 18.30,
+    "humidity": 53.13,
+    "lightlevel": 1576,
+    "windspeed": 0.25,
+    "pressure": 982.48
 }
 ```
 
